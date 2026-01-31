@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#B0E0F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F3FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Tree trunk gradient -->
+    <linearGradient id="trunkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5D4E37;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#6B5D4F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A3C2E;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Wood texture -->
+    <pattern id="woodTexture" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#D2691E"/>
+      <path d="M0,20 Q50,15 100,20" stroke="#8B4513" stroke-width="2" fill="none" opacity="0.3"/>
+      <path d="M0,40 Q50,35 100,40" stroke="#8B4513" stroke-width="1.5" fill="none" opacity="0.2"/>
+      <path d="M0,60 Q50,65 100,60" stroke="#8B4513" stroke-width="2" fill="none" opacity="0.3"/>
+      <path d="M0,80 Q50,75 100,80" stroke="#8B4513" stroke-width="1.5" fill="none" opacity="0.2"/>
+      <circle cx="30" cy="30" r="8" fill="#654321" opacity="0.4"/>
+      <circle cx="70" cy="70" r="6" fill="#654321" opacity="0.3"/>
+    </pattern>
+    
+    <!-- Leaf gradient -->
+    <radialGradient id="leafGradient" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#90EE90;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#32CD32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#228B22;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Dark leaf gradient -->
+    <radialGradient id="darkLeafGradient" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#7CCD7C;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Roof gradient -->
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#B22222;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#660000;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Grass gradient -->
+    <linearGradient id="grassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7CFC00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#32CD32;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="treeShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="5" dy="10" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="houseShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="15" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="1400" height="900" fill="url(#skyGradient)"/>
+  
+  <!-- Sun -->
+  <g id="sun">
+    <circle cx="1200" cy="120" r="60" fill="#FFD700" opacity="0.3" filter="url(#treeShadow)"/>
+    <circle cx="1200" cy="120" r="50" fill="#FFD700"/>
+    <circle cx="1190" cy="110" r="15" fill="#FFEA00" opacity="0.6"/>
+  </g>
+  
+  <!-- Distant clouds -->
+  <g id="clouds" opacity="0.7">
+    <ellipse cx="200" cy="150" rx="80" ry="30" fill="#FFFFFF"/>
+    <ellipse cx="180" cy="140" rx="50" ry="35" fill="#FFFFFF"/>
+    <ellipse cx="220" cy="145" rx="60" ry="40" fill="#FFFFFF"/>
+    
+    <ellipse cx="900" cy="200" rx="100" ry="35" fill="#FFFFFF"/>
+    <ellipse cx="870" cy="190" rx="60" ry="40" fill="#FFFFFF"/>
+    <ellipse cx="930" cy="195" rx="70" ry="45" fill="#FFFFFF"/>
+    
+    <ellipse cx="1100" cy="180" rx="70" ry="25" fill="#FFFFFF"/>
+    <ellipse cx="1080" cy="175" rx="45" ry="30" fill="#FFFFFF"/>
+    <ellipse cx="1120" cy="180" rx="55" ry="35" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Background forest hills -->
+  <g id="bgForest" opacity="0.4">
+    <ellipse cx="200" cy="650" rx="180" ry="200" fill="url(#darkLeafGradient)"/>
+    <ellipse cx="400" cy="680" rx="150" ry="180" fill="url(#darkLeafGradient)"/>
+    <ellipse cx="1000" cy="670" rx="200" ry="220" fill="url(#darkLeafGradient)"/>
+    <ellipse cx="1250" cy="690" rx="170" ry="190" fill="url(#darkLeafGradient)"/>
+  </g>
+  
+  <!-- Grass ground -->
+  <rect x="0" y="750" width="1400" height="150" fill="url(#grassGradient)"/>
+  
+  <!-- Grass details -->
+  <g id="grassDetails" opacity="0.6">
+    <path d="M50,820 Q52,800 54,820" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M120,830 Q122,810 124,830" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M200,825 Q202,805 204,825" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M350,828 Q352,808 354,828" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M500,822 Q502,802 504,822" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M900,827 Q902,807 904,827" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M1050,824 Q1052,804 1054,824" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M1200,829 Q1202,809 1204,829" stroke="#228B22" stroke-width="3" fill="none"/>
+    <path d="M1350,823 Q1352,803 1354,823" stroke="#228B22" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Main tree trunk -->
+  <g id="mainTree" filter="url(#treeShadow)">
+    <!-- Trunk -->
+    <rect x="640" y="400" width="120" height="350" rx="60" fill="url(#trunkGradient)"/>
+    
+    <!-- Bark texture details -->
+    <ellipse cx="670" cy="500" rx="25" ry="35" fill="#4A3C2E" opacity="0.3"/>
+    <ellipse cx="720" cy="580" rx="20" ry="30" fill="#4A3C2E" opacity="0.3"/>
+    <ellipse cx="685" cy="650" rx="22" ry="32" fill="#4A3C2E" opacity="0.3"/>
+    
+    <!-- Bark lines -->
+    <path d="M660,450 Q665,480 660,510" stroke="#3D2F22" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M730,470 Q735,500 730,530" stroke="#3D2F22" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M675,550 Q680,580 675,610" stroke="#3D2F22" stroke-width="2" fill="none" opacity="0.4"/>
+    
+    <!-- Left branch -->
+    <ellipse cx="600" cy="480" rx="80" ry="35" fill="url(#trunkGradient)" transform="rotate(-35 600 480)"/>
+    
+    <!-- Right branch -->
+    <ellipse cx="800" cy="480" rx="80" ry="35" fill="url(#trunkGradient)" transform="rotate(35 800 480)"/>
+  </g>
+  
+  <!-- Tree foliage - multiple layers for depth -->
+  <g id="foliage">
+    <!-- Back layer -->
+    <ellipse cx="600" cy="320" rx="140" ry="150" fill="url(#darkLeafGradient)" opacity="0.7"/>
+    <ellipse cx="800" cy="340" rx="130" ry="140" fill="url(#darkLeafGradient)" opacity="0.7"/>
+    
+    <!-- Middle layer -->
+    <ellipse cx="700" cy="250" rx="180" ry="190" fill="url(#leafGradient)"/>
+    <ellipse cx="650" cy="300" rx="150" ry="160" fill="url(#leafGradient)"/>
+    <ellipse cx="750" cy="310" rx="160" ry="170" fill="url(#leafGradient)"/>
+    
+    <!-- Front layer highlights -->
+    <ellipse cx="680" cy="270" rx="120" ry="130" fill="url(#leafGradient)" opacity="0.8"/>
+    <ellipse cx="720" cy="290" rx="110" ry="120" fill="url(#leafGradient)" opacity="0.8"/>
+    
+    <!-- Leaf details -->
+    <g opacity="0.3">
+      <path d="M680,240 Q690,250 700,240" fill="none" stroke="#006400" stroke-width="2"/>
+      <path d="M720,280 Q730,290 740,280" fill="none" stroke="#006400" stroke-width="2"/>
+      <path d="M650,310 Q660,320 670,310" fill="none" stroke="#006400" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- Treehouse platform -->
+  <g id="treehouse" filter="url(#houseShadow)">
+    <!-- Main platform -->
+    <rect x="500" y="450" width="400" height="250" rx="15" fill="url(#woodTexture)" stroke="#654321" stroke-width="3"/>
+    
+    <!-- Platform boards -->
+    <line x1="500" y1="480" x2="900" y2="480" stroke="#8B4513" stroke-width="2" opacity="0.4"/>
+    <line x1="500" y1="510" x2="900" y2="510" stroke="#8B4513" stroke-width="2" opacity="0.4"/>
+    <line x1="500" y1="540" x2="900" y2="540" stroke="#8B4513" stroke-width="2" opacity="0.4"/>
+    <line x1="500" y1="570" x2="900" y2="570" stroke="#8B4513" stroke-width="2" opacity="0.4"/>
+    <line x1="500" y1="600" x2="900" y2="600" stroke="#8B4513" stroke-width="2" opacity="0.4"/>
+    <line x1="500" y1="630" x2="900" y2="630" stroke="#8B4513" stroke-width="2" opacity="0.4"/>
+    <line x1="500" y1="660" x2="900" y2="660" stroke="#8B4513" stroke-width="2" opacity="0.4"/>
+    
+    <!-- Window -->
+    <g id="window">
+      <rect x="550" y="490" width="100" height="100" rx="10" fill="#87CEEB" stroke="#654321" stroke-width="6"/>
+      <!-- Window panes -->
+      <line x1="550" y1="540" x2="650" y2="540" stroke="#654321" stroke-width="4"/>
+      <line x1="600" y1="490" x2="600" y2="590" stroke="#654321" stroke-width="4"/>
+      <!-- Window reflection -->
+      <rect x="560" y="500" width="35" height="35" fill="#FFFFFF" opacity="0.3"/>
+      <!-- Window flowers -->
+      <circle cx="570" cy="590" r="8" fill="#FF69B4"/>
+      <circle cx="590" cy="590" r="8" fill="#FFB6C1"/>
+      <circle cx="610" cy="590" r="8" fill="#FF1493"/>
+      <circle cx="630" cy="590" r="8" fill="#FF69B4"/>
+    </g>
+    
+    <!-- Door -->
+    <g id="door">
+      <rect x="730" y="540" width="80" height="120" rx="40" ry="0" fill="#8B4513" stroke="#654321" stroke-width="4"/>
+      <!-- Door panels -->
+      <rect x="745" y="555" width="50" height="40" rx="5" fill="#654321" opacity="0.3"/>
+      <rect x="745" y="605" width="50" height="40" rx="5" fill="#654321" opacity="0.3"/>
+      <!-- Door knob -->
+      <circle cx="790" cy="600" r="6" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+    </g>
+    
+    <!-- Roof -->
+    <path d="M 480 450 L 700 350 L 920 450 Z" fill="url(#roofGradient)" stroke="#660000" stroke-width="3"/>
+    
+    <!-- Roof tiles -->
+    <g opacity="0.3">
+      <ellipse cx="600" cy="380" rx="40" ry="15" fill="#4A0000"/>
+      <ellipse cx="700" cy="360" rx="35" ry="12" fill="#4A0000"/>
+      <ellipse cx="800" cy="380" rx="40" ry="15" fill="#4A0000"/>
+    </g>
+    
+    <!-- Chimney -->
+    <g id="chimney">
+      <rect x="780" y="330" width="40" height="80" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+      <rect x="775" y="320" width="50" height="15" fill="#654321"/>
+      <!-- Smoke -->
+      <ellipse cx="800" cy="300" rx="15" ry="20" fill="#D3D3D3" opacity="0.6"/>
+      <ellipse cx="805" cy="280" rx="20" ry="25" fill="#D3D3D3" opacity="0.5"/>
+      <ellipse cx="810" cy="255" rx="18" ry="22" fill="#D3D3D3" opacity="0.4"/>
+    </g>
+    
+    <!-- Porch railing -->
+    <line x1="500" y1="670" x2="900" y2="670" stroke="#654321" stroke-width="6"/>
+    <line x1="520" y1="670" x2="520" y2="700" stroke="#654321" stroke-width="4"/>
+    <line x1="580" y1="670" x2="580" y2="700" stroke="#654321" stroke-width="4"/>
+    <line x1="640" y1="670" x2="640" y2="700" stroke="#654321" stroke-width="4"/>
+    <line x1="760" y1="670" x2="760" y2="700" stroke="#654321" stroke-width="4"/>
+    <line x1="820" y1="670" x2="820" y2="700" stroke="#654321" stroke-width="4"/>
+    <line x1="880" y1="670" x2="880" y2="700" stroke="#654321" stroke-width="4"/>
+    <line x1="500" y1="700" x2="900" y2="700" stroke="#654321" stroke-width="4"/>
+    
+    <!-- Decorative elements -->
+    <!-- Flower pots -->
+    <g id="flowerPot1">
+      <rect x="510" y="650" width="30" height="35" fill="#CD853F" stroke="#8B4513" stroke-width="2"/>
+      <circle cx="520" cy="645" r="6" fill="#FF69B4"/>
+      <circle cx="530" cy="642" r="6" fill="#FFB6C1"/>
+    </g>
+    
+    <g id="flowerPot2">
+      <rect x="860" y="650" width="30" height="35" fill="#CD853F" stroke="#8B4513" stroke-width="2"/>
+      <circle cx="870" cy="645" r="6" fill="#9370DB"/>
+      <circle cx="880" cy="642" r="6" fill="#BA55D3"/>
+    </g>
+  </g>
+  
+  <!-- Fence posts in foreground -->
+  <g id="fence" opacity="0.5">
+    <rect x="50" y="720" width="15" height="80" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+    <rect x="150" y="720" width="15" height="80" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+    <rect x="1235" y="720" width="15" height="80" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+    <rect x="1335" y="720" width="15" height="80" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+  </g>
+  
+  <!-- Butterflies -->
+  <g id="butterfly1" transform="translate(300, 400)">
+    <ellipse cx="0" cy="0" rx="12" ry="18" fill="#FF69B4" opacity="0.8"/>
+    <ellipse cx="0" cy="0" rx="8" ry="14" fill="#FFB6C1"/>
+    <ellipse cx="18" cy="0" rx="12" ry="18" fill="#FF69B4" opacity="0.8"/>
+    <ellipse cx="18" cy="0" rx="8" ry="14" fill="#FFB6C1"/>
+    <line x1="9" y1="-20" x2="9" y2="5" stroke="#000" stroke-width="2"/>
+    <circle cx="9" cy="-22" r="3" fill="#000"/>
+  </g>
+  
+  <g id="butterfly2" transform="translate(1100, 350)">
+    <ellipse cx="0" cy="0" rx="10" ry="15" fill="#FFD700" opacity="0.8"/>
+    <ellipse cx="0" cy="0" rx="6" ry="11" fill="#FFEA00"/>
+    <ellipse cx="15" cy="0" rx="10" ry="15" fill="#FFD700" opacity="0.8"/>
+    <ellipse cx="15" cy="0" rx="6" ry="11" fill="#FFEA00"/>
+    <line x1="7.5" y1="-18" x2="7.5" y2="4" stroke="#000" stroke-width="2"/>
+    <circle cx="7.5" cy="-20" r="2.5" fill="#000"/>
+  </g>
+</svg>
