@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="400" height="520">
+  <defs>
+    <radialGradient id="bodyGradient" cx="40%" cy="30%">
+      <stop offset="0%" style="stop-color:#D4915A" /><stop offset="45%" style="stop-color:#C07840" />
+      <stop offset="100%" style="stop-color:#8B4513" />
+    </radialGradient>
+    <radialGradient id="bellyGradient" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFE8D0" /><stop offset="55%" style="stop-color:#F0C8A0" />
+      <stop offset="100%" style="stop-color:#DEB887" />
+    </radialGradient>
+    <radialGradient id="headGradient" cx="38%" cy="28%">
+      <stop offset="0%" style="stop-color:#DBC0A0" /><stop offset="40%" style="stop-color:#CD853F" />
+      <stop offset="100%" style="stop-color:#8B4513" />
+    </radialGradient>
+    <radialGradient id="snoutGradient" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#FFE8D0" /><stop offset="65%" style="stop-color:#F5DEB3" />
+      <stop offset="100%" style="stop-color:#DEB887" />
+    </radialGradient>
+    <radialGradient id="noseGradient" cx="38%" cy="30%">
+      <stop offset="0%" style="stop-color:#5A5A5A" /><stop offset="100%" style="stop-color:#1a1a1a" />
+    </radialGradient>
+    <radialGradient id="eyeShine" cx="25%" cy="25%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#FFFFFF;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="irisGradient" cx="40%" cy="35%">
+      <stop offset="0%" style="stop-color:#4A3728" /><stop offset="60%" style="stop-color:#2C1810" />
+      <stop offset="100%" style="stop-color:#1A0F08" />
+    </radialGradient>
+    <linearGradient id="backpackBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF5350" /><stop offset="50%" style="stop-color:#E53935" />
+      <stop offset="100%" style="stop-color:#C62828" />
+    </linearGradient>
+    <linearGradient id="bookCover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5" /><stop offset="100%" style="stop-color:#1976D2" />
+    </linearGradient>
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="6" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.28"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes eyeSparkle { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+      .eye-sparkle { animation: eyeSparkle 2.5s ease-in-out infinite; }
+      .eye-sparkle-2 { animation: eyeSparkle 2.5s ease-in-out infinite 1.2s; }
+    </style>
+  </defs>
+
+  <!-- Backpack (behind body) -->
+  <g id="backpack" filter="url(#dropShadow)">
+    <path d="M 168 272 Q 156 295 160 342" stroke="#E53935" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 232 272 Q 244 295 240 342" stroke="#E53935" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <rect x="156" y="242" width="88" height="102" rx="17" fill="url(#backpackBody)"/>
+    <rect x="159" y="245" width="82" height="96" rx="15" fill="#D32F2F" opacity="0.28"/>
+    <rect x="166" y="298" width="68" height="34" rx="9" fill="#C62828" stroke="#B71C1C" stroke-width="1.5"/>
+    <path d="M166,298 Q200,293 234,298" stroke="#B71C1C" stroke-width="1.5" fill="#D32F2F"/>
+    <circle cx="200" cy="296" r="2.8" fill="#FFD700"/>
+    <path d="M 186 242 Q 200 234 214 242" stroke="#C62828" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Star on pocket -->
+    <polygon points="200,306 203,313 210,313 204,317 206,324 200,320 194,324 196,317 190,313 197,313" fill="#FFD700"/>
+  </g>
+
+  <!-- Legs -->
+  <g id="legs" filter="url(#dropShadow)">
+    <ellipse cx="150" cy="435" rx="33" ry="55" fill="url(#bodyGradient)"/>
+    <ellipse cx="150" cy="498" rx="38" ry="18" fill="url(#bellyGradient)"/>
+    <circle cx="140" cy="503" r="4.5" fill="#CD853F" opacity="0.5"/>
+    <circle cx="150" cy="505" r="4.5" fill="#CD853F" opacity="0.5"/>
+    <circle cx="160" cy="503" r="4.5" fill="#CD853F" opacity="0.5"/>
+    <ellipse cx="250" cy="435" rx="33" ry="55" fill="url(#bodyGradient)"/>
+    <ellipse cx="250" cy="498" rx="38" ry="18" fill="url(#bellyGradient)"/>
+    <circle cx="240" cy="503" r="4.5" fill="#CD853F" opacity="0.5"/>
+    <circle cx="250" cy="505" r="4.5" fill="#CD853F" opacity="0.5"/>
+    <circle cx="260" cy="503" r="4.5" fill="#CD853F" opacity="0.5"/>
+  </g>
+
+  <!-- Body -->
+  <g id="body">
+    <ellipse cx="200" cy="340" rx="88" ry="108" fill="url(#bodyGradient)" filter="url(#dropShadow)"/>
+    <ellipse cx="178" cy="318" rx="55" ry="75" fill="url(#bodyGradient)" opacity="0.22"/>
+    <ellipse cx="200" cy="358" rx="58" ry="72" fill="url(#bellyGradient)"/>
+    <ellipse cx="192" cy="345" rx="38" ry="50" fill="#FFE8D0" opacity="0.28"/>
+  </g>
+
+  <!-- Book in left paw -->
+  <g id="book" filter="url(#dropShadow)" transform="rotate(-12 92 388)">
+    <rect x="70" y="366" width="42" height="52" rx="2" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="0.8"/>
+    <rect x="68" y="363" width="42" height="52" rx="3" fill="url(#bookCover)" stroke="#1565C0" stroke-width="1.5"/>
+    <rect x="66" y="363" width="5" height="52" rx="1" fill="#1565C0"/>
+    <rect x="76" y="376" width="26" height="2.5" rx="1" fill="#FFFFFF" opacity="0.8"/>
+    <rect x="76" y="382" width="19" height="2.5" rx="1" fill="#FFFFFF" opacity="0.6"/>
+    <polygon points="89,394 91.5,399 97,399 92.5,402 94,407 89,404 84,407 85.5,402 81,399 86.5,399" fill="#FFD700"/>
+  </g>
+
+  <!-- Arms -->
+  <g id="arms">
+    <!-- Left arm (holds book) -->
+    <g filter="url(#dropShadow)">
+      <ellipse cx="118" cy="312" rx="27" ry="63" fill="url(#bodyGradient)" transform="rotate(-16 118 312)"/>
+      <ellipse cx="103" cy="380" rx="23" ry="16" fill="url(#bellyGradient)" transform="rotate(-16 103 380)"/>
+      <circle cx="94" cy="382" r="3.5" fill="#CD853F" opacity="0.5" transform="rotate(-16 103 380)"/>
+      <circle cx="103" cy="384" r="3.5" fill="#CD853F" opacity="0.5" transform="rotate(-16 103 380)"/>
+      <circle cx="112" cy="382" r="3.5" fill="#CD853F" opacity="0.5" transform="rotate(-16 103 380)"/>
+    </g>
+    <!-- Right arm -->
+    <g filter="url(#dropShadow)">
+      <ellipse cx="282" cy="312" rx="27" ry="63" fill="url(#bodyGradient)" transform="rotate(16 282 312)"/>
+      <ellipse cx="297" cy="380" rx="23" ry="16" fill="url(#bellyGradient)" transform="rotate(16 297 380)"/>
+      <circle cx="288" cy="382" r="3.5" fill="#CD853F" opacity="0.5" transform="rotate(16 297 380)"/>
+      <circle cx="297" cy="384" r="3.5" fill="#CD853F" opacity="0.5" transform="rotate(16 297 380)"/>
+      <circle cx="306" cy="382" r="3.5" fill="#CD853F" opacity="0.5" transform="rotate(16 297 380)"/>
+    </g>
+  </g>
+
+  <!-- Head -->
+  <g id="head" filter="url(#dropShadow)">
+    <circle cx="200" cy="150" r="90" fill="url(#headGradient)"/>
+    <circle cx="178" cy="130" r="68" fill="url(#headGradient)" opacity="0.2"/>
+
+    <!-- Ears -->
+    <ellipse cx="135" cy="88" rx="34" ry="40" fill="url(#bodyGradient)" transform="rotate(-18 135 88)"/>
+    <ellipse cx="135" cy="93" rx="21" ry="26" fill="url(#bellyGradient)" transform="rotate(-18 135 93)"/>
+    <ellipse cx="135" cy="90" rx="12" ry="16" fill="#FFE8D0" opacity="0.35" transform="rotate(-18 135 90)"/>
+    <ellipse cx="265" cy="88" rx="34" ry="40" fill="url(#bodyGradient)" transform="rotate(18 265 88)"/>
+    <ellipse cx="265" cy="93" rx="21" ry="26" fill="url(#bellyGradient)" transform="rotate(18 265 93)"/>
+    <ellipse cx="265" cy="90" rx="12" ry="16" fill="#FFE8D0" opacity="0.35" transform="rotate(18 265 90)"/>
+
+    <!-- Snout -->
+    <ellipse cx="200" cy="182" rx="48" ry="38" fill="url(#snoutGradient)"/>
+    <ellipse cx="195" cy="178" rx="40" ry="30" fill="url(#snoutGradient)" opacity="0.35"/>
+
+    <!-- Nose -->
+    <ellipse cx="200" cy="172" rx="17" ry="13" fill="url(#noseGradient)"/>
+    <ellipse cx="194" cy="168" rx="5.5" ry="4.5" fill="#FFFFFF" opacity="0.6"/>
+
+    <!-- Mouth - big warm open smile -->
+    <path d="M 187 183 Q 200 204 213 183" stroke="#4A3A2A" stroke-width="2.8" fill="#E57373" stroke-linecap="round"/>
+    <ellipse cx="200" cy="196" rx="6.5" ry="3.5" fill="#EF9A9A" opacity="0.65"/>
+
+    <!-- Left Eye -->
+    <ellipse cx="163" cy="145" rx="24" ry="30" fill="#FFFFFF"/>
+    <circle cx="165" cy="150" r="16" fill="url(#irisGradient)"/>
+    <circle cx="166" cy="151" r="10" fill="#0D0D0D"/>
+    <ellipse cx="158" cy="143" rx="7" ry="8" fill="url(#eyeShine)" class="eye-sparkle"/>
+    <circle cx="172" cy="156" r="3" fill="#FFFFFF" opacity="0.7" class="eye-sparkle-2"/>
+    <path d="M 140 132 Q 163 122 186 132" stroke="#8B6914" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.42"/>
+
+    <!-- Right Eye -->
+    <ellipse cx="237" cy="145" rx="24" ry="30" fill="#FFFFFF"/>
+    <circle cx="235" cy="150" r="16" fill="url(#irisGradient)"/>
+    <circle cx="234" cy="151" r="10" fill="#0D0D0D"/>
+    <ellipse cx="242" cy="143" rx="7" ry="8" fill="url(#eyeShine)" class="eye-sparkle-2"/>
+    <circle cx="228" cy="156" r="3" fill="#FFFFFF" opacity="0.7" class="eye-sparkle"/>
+    <path d="M 214 132 Q 237 122 260 132" stroke="#8B6914" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.42"/>
+
+    <!-- Eyebrows - friendly raised -->
+    <path d="M 143 125 Q 163 117 182 121" stroke="#6B4E2A" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 218 121 Q 237 117 257 125" stroke="#6B4E2A" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Cheek blush -->
+    <ellipse cx="138" cy="172" rx="20" ry="13" fill="#FF7C9E" opacity="0.3"/>
+    <ellipse cx="262" cy="172" rx="20" ry="13" fill="#FF7C9E" opacity="0.3"/>
+  </g>
+
+  <!-- Fur texture -->
+  <g opacity="0.11">
+    <circle cx="182" cy="345" r="2.5" fill="#654321"/><circle cx="198" cy="360" r="2" fill="#654321"/>
+    <circle cx="215" cy="348" r="2.5" fill="#654321"/><circle cx="178" cy="370" r="2" fill="#654321"/>
+    <circle cx="222" cy="365" r="2" fill="#654321"/><circle cx="178" cy="140" r="1.8" fill="#654321"/>
+    <circle cx="192" cy="135" r="1.5" fill="#654321"/><circle cx="212" cy="138" r="1.8" fill="#654321"/>
+    <circle cx="226" cy="142" r="1.5" fill="#654321"/>
+  </g>
+</svg>
